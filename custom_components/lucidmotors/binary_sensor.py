@@ -6,7 +6,7 @@ from collections.abc import Callable
 from dataclasses import dataclass, field
 import logging
 
-from lucidmotors import Vehicle, WalkawayState, DoorState, HvacPower
+from lucidmotors import Vehicle, WalkawayState, DoorState, HvacPower, ChargeState
 
 from homeassistant.components.binary_sensor import (
     BinarySensorDeviceClass,
@@ -110,6 +110,15 @@ SENSOR_TYPES: dict[str, LucidBinarySensorEntityDescription] = {
         translation_key="hvac_power",
         icon="mdi:hvac",
         is_on_fn=lambda vehicle: vehicle.state.hvac.power != HvacPower.HVAC_OFF,
+    ),
+    "charging_cable": LucidBinarySensorEntityDescription(
+        key="charge_state",
+        key_path=["state", "charging"],
+        translation_key="charging_cable",
+        icon="mdi:ev-plug-tesla",
+        device_class=BinarySensorDeviceClass.PLUG,
+        is_on_fn=lambda vehicle: vehicle.state.charging.charge_state
+        != ChargeState.Value('CHARGE_STATE_NOT_CONNECTED'),
     ),
 }
 
