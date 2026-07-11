@@ -11,6 +11,10 @@
 
 _Integration for Home Assistant that uses [python-lucidmotors][python-lucidmotors]._
 
+> This is a fork of [borski/ha-lucidmotors][upstream], the original Lucid Motors
+> integration by [Michael Borohovski (@borski)][upstream] and [Nick Shipp (@nshp)](https://github.com/nshp).
+> All credit for the original work goes to them; this fork carries additional fixes and releases.
+
 To use this extension, you'll need the following information
 
 - Lucid Motors Username
@@ -23,7 +27,7 @@ There are two methods to install this installation:
 
 ### HACS Installation (easiest)
 1. Use [HACS](https://hacs.xyz/docs/setup/download).
-1. In HACS, add a custom repository by going to `HACS > Integrations > 3 dots > custom repositories` and adding this github repo `https://github.com/borski/ha-lucidmotors`, with the `integration` type.
+1. In HACS, add a custom repository by going to `HACS > Integrations > 3 dots > custom repositories` and adding this github repo `https://github.com/dizzyd/ha-lucidmotors`, with the `integration` type.
 1. Restart Home Assistant
 1. In the HA UI go to "Configuration" -> "Integrations" click "+" and search for "Lucid Motors"
 1. Click <a href="https://my.home-assistant.io/redirect/config_flow_start?domain=lucidmotors"><img alt="Add Integration" title="Add Integration" src="https://my.home-assistant.io/badges/config_flow_start.svg" width="160px"></a> or in the Home Assistant UI go to "Configuration" -> "Integrations" click "+" and search for "Lucid Motors".
@@ -83,12 +87,13 @@ If you want to contribute to this please read the [Contribution guidelines](CONT
 ***
 
 [python-lucidmotors]: https://github.com/nshp/python-lucidmotors
-[commits-shield]: https://img.shields.io/github/commit-activity/y/borski/ha-lucidmotors.svg?style=for-the-badge
-[commits]: https://github.com/borski/ha-lucidmotors/commits/main
+[upstream]: https://github.com/borski/ha-lucidmotors
+[commits-shield]: https://img.shields.io/github/commit-activity/y/dizzyd/ha-lucidmotors.svg?style=for-the-badge
+[commits]: https://github.com/dizzyd/ha-lucidmotors/commits/main
 [forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg?style=for-the-badge
 [forum]: https://community.home-assistant.io/
-[license-shield]: https://img.shields.io/github/license/borski/ha-lucidmotors.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/dizzyd/ha-lucidmotors.svg?style=for-the-badge
 [maintenance-shield]: https://img.shields.io/badge/maintainers-Michael%20Borohovski%20%40borski,%20Nick%20Shipp%20%40nshp-blue.svg?style=for-the-badge
-[releases-shield]: https://img.shields.io/github/release/borski/ha-lucidmotors.svg?style=for-the-badge
-[releases]: https://github.com/ludeeus/integration_blueprint/releases
+[releases-shield]: https://img.shields.io/github/release/dizzyd/ha-lucidmotors.svg?style=for-the-badge
+[releases]: https://github.com/dizzyd/ha-lucidmotors/releases
 [pypi-downloads-shield]: https://img.shields.io/pypi/dm/lucidmotors?style=for-the-badge&logo=home-assistant
